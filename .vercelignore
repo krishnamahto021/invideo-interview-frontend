@@ -1,0 +1,6 @@
+wasm-calculator/target/
+wasm-calculator/Cargo.lock
+node_modules/
+.git/
+*.log
+.DS_Store

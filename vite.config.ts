@@ -13,4 +13,18 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ["wasm-calculator"],
   },
+  build: {
+    rollupOptions: {
+      external: [],
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name?.endsWith('.wasm')) {
+            return 'assets/[name]-[hash][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
+      },
+    },
+  },
+  assetsInclude: ['**/*.wasm'],
 });
