@@ -30,7 +30,8 @@ const ShaderGenerator = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:4000/api/generate-shader",
+        // "http://localhost:4000/api/generate-shader",
+        " https://romantic-endurance-production-8eb0.up.railway.app/api/generate-shader",
         {
           method: "POST",
           headers: {
